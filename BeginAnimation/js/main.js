@@ -90,20 +90,20 @@ pdfjsLib
 document.querySelector('#prev-page').addEventListener('click', showPrevPage);
 document.querySelector('#next-page').addEventListener('click', showNextPage);
 
-PDFView.open(pdf_url, 0);
+// PDFView.open(pdf_url, 0);
 
-// search with PDF.js
-function searchPDF(td_text) {
-    PDFView.findBar.open();
-    $(PDFView.findBar.findField).val(td_text);
-    $("#tableDiv").focus();
+// // search with PDF.js
+// function searchPDF(td_text) {
+//     PDFView.findBar.open();
+//     $(PDFView.findBar.findField).val(td_text);
+//     $("#tableDiv").focus();
 
-    var event = document.createEvent('CustomEvent');
-    event.initCustomEvent('find', true, true, {
-        query: td_text,
-        caseSensitive: $("#findMatchCase").prop('checked'),
-        highlightAll: $("#findHighlightAll").prop('checked'),
-        findPrevious: undefined
-    });
-    return event;
-}
+//     var event = document.createEvent('CustomEvent');
+//     event.initCustomEvent('find', true, true, {
+//         query: td_text,
+//         caseSensitive: $("#findMatchCase").prop('checked'),
+//         highlightAll: $("#findHighlightAll").prop('checked'),
+//         findPrevious: undefined
+//     });
+//     return event;
+// }
